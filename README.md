@@ -1,0 +1,3 @@
+# Yet another code editor for specially work with Kubernetes resources.
+
+Work in progess...
