@@ -1,4 +1,4 @@
-# Copyright 2017 The Kubernetes Authors.
+# Copyright 2017 The Deck8s Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,3 +40,29 @@ subjects:
   name: admin-user
   namespace: kubernetes-editor
 
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kubeditor
+  name: kubeditor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubeditor
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kubeditor
+    spec:
+      containers:
+      - image: deck8s/kubetior:v1.0.0-beta
+        name: kubetior
+        resources: {}
+status: {}
